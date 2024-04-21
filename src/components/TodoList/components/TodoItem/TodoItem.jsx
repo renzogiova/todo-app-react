@@ -7,39 +7,26 @@ import { SlOptionsVertical } from "react-icons/sl";
 
 
 const TodoItem = (props) => {
-  const {todo, deleteTodo} = props;
+  const {todo, deleteTodo, checkTodo} = props;
   const [showOptions, setShowOptions] = useState(false);
   const handleShowOptions = (e) => {
-    console.log(e);
-    setShowOptions(true);
+    setShowOptions(!showOptions);
   }
   return (
     <div className={TodoItemStyles.todoItem}>
-      <TodoOptions showOptions={showOptions} deleteTodo={deleteTodo} id={todo.id}/>
-      <div style={{
-        position:'relative',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
-      }}>
+      <TodoOptions showOptions={showOptions} setShowOptions={setShowOptions} deleteTodo={deleteTodo} checkTodo={checkTodo} id={todo.id}/>
+      {/* header */}
+      <div className={TodoItemStyles.todoItem_header}>
         <span style={{
           fontWeight: 'bold',
         }}>
           Todo Title
         </span>
-        <button style={{
-          border: 'none',
-          background: 'none',
-          position: 'absolute',
-          right: '0',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          cursor: 'pointer'
-        }} onClick={handleShowOptions}>
+        <button className={TodoItemStyles.optionsButton} onClick={handleShowOptions}>
           <SlOptionsVertical />
         </button>
       </div>
+      {/* body */}
       <div style={{
         padding: '0.25rem'
       }}>

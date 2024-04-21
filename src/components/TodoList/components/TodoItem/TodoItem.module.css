@@ -12,3 +12,33 @@
   justify-content: space-around;
   position: relative;
 }
+
+.todoItem_header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todoItem_body {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.todoItem_checked {
+  text-decoration: line-through;
+}
+
+.optionsButton {
+  border: none;
+  background: none;
+  position: absolute;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

@@ -28,7 +28,7 @@ const TodoList = (props) => {
   return (
     <div className={TodoListStyles.todoList}>
       {
-        allTodos.map(todo => <TodoItem todo={todo} deleteTodo={deleteTodo}/>)
+        allTodos.map(todo => <TodoItem todo={todo} deleteTodo={deleteTodo} checkTodo={checkTodo}/>)
       }
     </div>
   )
