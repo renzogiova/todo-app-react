@@ -1,0 +1,14 @@
+.todoItem {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  margin: 5px 10px;
+  height: 180px;
+  width: 260px;
+  max-height: 380px;
+  max-width: 400px;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}

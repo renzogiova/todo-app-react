@@ -1,0 +1,12 @@
+.todoOptions {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -20%;
+  top: 0;
+  z-index: 999;
+}
+
+.todoOptions_hidden {
+  display: none;
+}

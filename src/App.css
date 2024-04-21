@@ -1,0 +1,22 @@
+#root {
+  max-width: 1280px;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.app_lightMode {
+  background-color: #f8fafc;
+}
+
+.app_darkMode {
+  background-color: #0f172a;
+}

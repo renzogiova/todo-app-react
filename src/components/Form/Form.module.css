@@ -1,0 +1,10 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+  max-width: 450px;
+  max-height: 400px;
+
+}
