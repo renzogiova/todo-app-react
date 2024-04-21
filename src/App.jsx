@@ -9,13 +9,7 @@ import TodoList from './components/TodoList/TodoList';
 function App() {
 
   const [darkMode, setDarkMode] = useState(false); 
-  const [todos, setTodos] = useState([]);
-  const [newTodo, setNewTodo] = useState({
-    description: "",
-    done: false,
-    createdAt: new Date().toISOString(),
-    index: 0
-  })
+  const [allTodos, setAllTodos] = useState([]);
 
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -52,8 +46,8 @@ function App() {
         padding: '0.25rem',
         flexGrow: 1
       }}>
-        <Form newTodo={newTodo} todos={todos} setNewTodo={setNewTodo} setTodos={setTodos} />
-        <TodoList todos={todos} setTodos={setTodos}/>
+        <Form allTodos={allTodos} setAllTodos={setAllTodos} />
+        <TodoList allTodos={allTodos} setAllTodos={setAllTodos}/>
       </main>
       <footer style={{
         borderTop: `solid 0.5px ${!darkMode ? '#d1d5db' : '#e5e7eb' }`

@@ -15,7 +15,7 @@ const TodoItem = (props) => {
   }
   return (
     <div className={TodoItemStyles.todoItem}>
-      <TodoOptions showOptions={showOptions} deleteTodo={deleteTodo} index={todo.index}/>
+      <TodoOptions showOptions={showOptions} deleteTodo={deleteTodo} id={todo.id}/>
       <div style={{
         position:'relative',
         display: 'flex',
@@ -67,7 +67,7 @@ const TodoItem = (props) => {
           fontSize: '12px',
           margin: 0
         }}>
-          #{todo.index}
+          #{todo.id}
         </p>
       </div>
     </div>
