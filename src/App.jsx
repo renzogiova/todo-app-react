@@ -15,8 +15,13 @@ function App() {
     setDarkMode(!darkMode);
   }
 
+  const handleOutsideClick = (e) => {
+    // console.log(e);
+    // console.log('Clicked outside');
+  }
+
   return (
-    <div className={`app ${!darkMode? 'app_lightMode' : 'app_darkMode'  }`}> 
+    <div className={`app ${!darkMode? 'app_lightMode' : 'app_darkMode'  }`} onClick={handleOutsideClick} > 
       <header style={{
         display: 'flex',
         justifyContent: 'space-between',

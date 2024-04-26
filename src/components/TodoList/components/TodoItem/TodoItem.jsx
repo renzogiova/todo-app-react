@@ -16,7 +16,7 @@ const TodoItem = (props) => {
     <div className={TodoItemStyles.todoItem}>
       <TodoOptions showOptions={showOptions} setShowOptions={setShowOptions} deleteTodo={deleteTodo} checkTodo={checkTodo} id={todo.id}/>
       {/* header */}
-      <div className={TodoItemStyles.todoItem_header}>
+      <div className={`${TodoItemStyles.todoItem_header} ${todo.done && TodoItemStyles.todoItem_checked}`}>
         <span style={{
           fontWeight: 'bold',
         }}>
@@ -27,9 +27,7 @@ const TodoItem = (props) => {
         </button>
       </div>
       {/* body */}
-      <div style={{
-        padding: '0.25rem'
-      }}>
+      <div className={`${TodoItemStyles.todoItem_body} ${todo.done && TodoItemStyles.todoItem_checked}`}>
         <p style={{
           fontSize: '12px',
           textAlign: 'justify',
